@@ -17,7 +17,15 @@ const ExpoSecureStoreAdapter = {
 const supabaseUrl = process.env.EXPO_PUBLIC_SUPABASE_URL;
 const supabaseAnonKey = process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY;
 
-export const supabase = createClient(supabaseUrl!, supabaseAnonKey!, {
+if (!supabaseUrl || !supabaseAnonKey) {
+  throw new Error("Supabase URL and Anon Key are required. Please check your .env file.");
+}
+
+if (supabaseUrl.includes('YOUR_SUPABASE_URL')) {
+  throw new Error("Please replace 'YOUR_SUPABASE_URL' in your .env file with your actual Supabase URL.");
+}
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
   auth: {
     storage: ExpoSecureStoreAdapter as any,
     autoRefreshToken: true,
