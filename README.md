@@ -25,6 +25,70 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
+## Project Structure
+
+Here is the project structure:
+
+```
+.
+├── .expo/
+├── .git/
+├── .vscode/
+│   ├── extensions.json
+│   └── settings.json
+├── app/
+│   ├── _layout.tsx
+│   ├── explore.tsx
+│   ├── index.tsx
+│   └── modal.tsx
+├── assets/
+│   └── images/
+│       ├── android-icon-background.png
+│       ├── android-icon-foreground.png
+│       ├── android-icon-monochrome.png
+│       ├── favicon.png
+│       ├── icon.png
+│       ├── partial-react-logo.png
+│       ├── react-logo.png
+│       ├── react-logo@2x.png
+│       ├── react-logo@3x.png
+│       └── splash-icon.png
+├── components/
+│   ├── external-link.tsx
+│   ├── haptic-tab.tsx
+│   ├── hello-wave.tsx
+│   ├── parallax-scroll-view.tsx
+│   ├── themed-text.tsx
+│   ├── themed-view.tsx
+│   └── ui/
+│       ├── collapsible.tsx
+│       ├── icon-symbol.ios.tsx
+│       └── icon-symbol.tsx
+├── constants/
+│   └── theme.ts
+├── docs/
+│   ├── database.schema.md
+│   └── database.sechema.json
+├── hooks/
+│   ├── use-color-scheme.ts
+│   ├── use-color-scheme.web.ts
+│   └── use-theme-color.ts
+├── lib/
+│   └── supabase.ts
+├── node_modules/
+├── scripts/
+│   └── reset-project.js
+├── supabase/
+│   └── migrations/
+├── .env
+├── .gitignore
+├── app.json
+├── eslint.config.js
+├── package-lock.json
+├── package.json
+└── tsconfig.json
+```
+
 ## Get a fresh project
 
 When you're ready, run:
